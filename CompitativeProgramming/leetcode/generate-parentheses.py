@@ -12,13 +12,13 @@ class Solution:
                     
                     store.append(ans)
                     tracker.add(ans)
-                return
-            
+                return  
             for par in ["(",")"]:
+                if temp and temp[0]==')':
+                    return 
                 temp.append(par)
                 helper(temp)
                 temp.pop()
-
         helper([])
         return store 
 
